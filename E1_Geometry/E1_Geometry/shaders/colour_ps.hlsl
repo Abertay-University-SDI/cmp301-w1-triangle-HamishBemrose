@@ -4,11 +4,15 @@
 struct InputType
 {
 	float4 position : SV_POSITION;
-	float4 colour : COLOR;
+	float2 texturecoord : TEXCOORD;
 };
+
+	
 
 
 float4 main(InputType input) : SV_TARGET
 {
-	return input.colour;
+    float4 color_red = { 0, 0, 0, 1 };
+    return color_red;
+	//return input.texturecoord;
 }
